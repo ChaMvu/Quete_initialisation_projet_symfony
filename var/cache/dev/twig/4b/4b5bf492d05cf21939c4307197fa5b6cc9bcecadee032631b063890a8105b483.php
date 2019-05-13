@@ -415,6 +415,6 @@ class __TwigTemplate_c76736b4715f3eaaa04a2b64ce7954d060782cf3ccb1b8341f6448e9da9
     });
 })();
 </script>
-", "@WebProfiler/Profiler/settings.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
+", "@WebProfiler/Profiler/settings.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
     }
 }

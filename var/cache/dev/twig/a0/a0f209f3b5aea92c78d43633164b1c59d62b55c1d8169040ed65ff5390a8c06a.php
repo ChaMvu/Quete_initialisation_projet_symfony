@@ -73,6 +73,6 @@ class __TwigTemplate_b7b03a3007cbba36c417e29ce2762d557e14633799d169f0ec71f6baabe
         <?php endforeach; ?>
     </ul>
 <?php endif ?>
-", "@Framework/Form/form_errors.html.php", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/framework-bundle/Resources/views/Form/form_errors.html.php");
+", "@Framework/Form/form_errors.html.php", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/framework-bundle/Resources/views/Form/form_errors.html.php");
     }
 }

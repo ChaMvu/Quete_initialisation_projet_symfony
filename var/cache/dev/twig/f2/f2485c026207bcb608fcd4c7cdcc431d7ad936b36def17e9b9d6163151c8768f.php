@@ -1123,6 +1123,6 @@ class __TwigTemplate_2c8b5e89cbb1f7f42bf9fa266e89e65d309fafccafe6dbb05ae18bdf66b
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
     }
 }

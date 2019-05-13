@@ -408,6 +408,6 @@ class __TwigTemplate_c4e2aaf3c72db4fc2534cbc145a85fd31a8a0cf6f3086b7ecf75d23a9ea
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

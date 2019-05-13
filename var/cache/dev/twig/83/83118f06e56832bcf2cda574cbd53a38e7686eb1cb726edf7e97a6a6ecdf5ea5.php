@@ -187,6 +187,6 @@ class __TwigTemplate_543fe5c79d7b3706f46d47494d7d5c14899c49aa44730f7e112290b35bb
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
     }
 }

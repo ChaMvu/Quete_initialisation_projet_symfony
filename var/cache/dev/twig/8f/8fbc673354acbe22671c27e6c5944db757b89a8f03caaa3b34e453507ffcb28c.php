@@ -217,6 +217,6 @@ class __TwigTemplate_78620f0262378d861cd08cfc1a92dc0ce589a36a8b2adc5d3407ec30217
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

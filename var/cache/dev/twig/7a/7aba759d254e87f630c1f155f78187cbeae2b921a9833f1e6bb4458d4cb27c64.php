@@ -106,6 +106,6 @@ class __TwigTemplate_320f5802de24a5295a0b5771e3e5dda8993ea8ec146c266655c334fc0d8
     </exception>
 {% endfor %}
 </error>
-", "@Twig/Exception/exception.xml.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
+", "@Twig/Exception/exception.xml.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
     }
 }
