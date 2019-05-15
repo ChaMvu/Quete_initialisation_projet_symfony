@@ -100,6 +100,7 @@ class __TwigTemplate_97cfd3e726f199be2c001cbd8fa02c26ffb43a97d56b0c1ff0a6de998ec
 
 <h1>{{ owner }}'s blog index</h1>
 
-{% endblock %}", "Blog/index.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/Blog/index.html.twig");
+{% endblock %}
+", "Blog/index.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/Blog/index.html.twig");
     }
 }

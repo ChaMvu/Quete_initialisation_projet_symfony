@@ -97,6 +97,8 @@ class __TwigTemplate_53acfca908e9fab8459e1c344b74a34cd86d0969159280201d44b88d35d
 
     <h1>Bienvenue sur mon blog</h1>
 
-{% endblock %}", "default.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/default.html.twig");
+{% endblock %}
+
+", "default.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/default.html.twig");
     }
 }
