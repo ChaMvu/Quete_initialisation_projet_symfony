@@ -103,3 +103,12 @@ e5647c,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/MonArticle,1557909267,52bfd
 e8b399,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon_article,1557909277,ac5244,200
 ac5244,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon_article,1557909277,,404
 25e309,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/article-du-1-janvier-1970,1557909305,,200
+dae55a,127.0.0.1,GET,http://127.0.0.1:8000/,1557930991,,200
+e80be8,127.0.0.1,GET,http://127.0.0.1:8000/blog,1557930999,,200
+e094ae,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon-article,1557931002,,200
+3894a7,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/MonArticle,1557931011,546e73,200
+546e73,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/MonArticle,1557931011,,404
+e4dc45,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon_article,1557931017,0bbe21,200
+0bbe21,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon_article,1557931017,,404
+04f914,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon_article,1557931017,d69762,200
+d69762,127.0.0.1,GET,http://127.0.0.1:8000/blog/show/mon_article,1557931017,,404
