@@ -75,6 +75,6 @@ class __TwigTemplate_6c88b4e89e043d7f0fcf56a211c7f3e8ad75a296f2e0e044a8358d0650b
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "@Framework/Form/choice_attributes.html.php", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
+", "@Framework/Form/choice_attributes.html.php", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
     }
 }

@@ -2,13 +2,16 @@
 
 
 {% block body %}
+
+
     {{ category.name }}
+<ul>
+
     {% for article in articles %}
-
-        <h1>{{ article.id }} {{ article.title }}</h1>
-
-        <p>{{ article.content }}</p>
-
+    <li>    {{ article.title }}</li>
+    {% else %}
+rien !
     {% endfor %}
+</ul>
 
 {% endblock %}

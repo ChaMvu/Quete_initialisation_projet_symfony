@@ -73,6 +73,6 @@ class __TwigTemplate_7b54a2963290a499b1a87d0b61e904d42c13a53e02587af7f7bc977a331
     <?php echo \$view['form']->widget(\$form, \$widgetAttr); ?>
     <?php echo \$view['form']->help(\$form); ?>
 </div>
-", "@Framework/Form/form_row.html.php", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/framework-bundle/Resources/views/Form/form_row.html.php");
+", "@Framework/Form/form_row.html.php", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/framework-bundle/Resources/views/Form/form_row.html.php");
     }
 }

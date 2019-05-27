@@ -169,6 +169,6 @@ class __TwigTemplate_5b86d25803329b9bac73003a7635d026287fc2b0a963688f4806c7f8793
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

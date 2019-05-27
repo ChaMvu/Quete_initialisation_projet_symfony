@@ -120,6 +120,6 @@ class __TwigTemplate_40d347034dea390c5ef07bc27872958d9e52dc4ff2f2f047406ecc21ae7
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/table.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/table.html.twig");
+", "@WebProfiler/Profiler/table.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/table.html.twig");
     }
 }

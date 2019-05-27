@@ -95,6 +95,6 @@ class __TwigTemplate_6d23519ad56c747be3e6b496103ee436391b5eed98d803b91c8413a2459
         </div>
     </div>
 </div>
-", "@WebProfiler/Profiler/header.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/header.html.twig");
+", "@WebProfiler/Profiler/header.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/header.html.twig");
     }
 }

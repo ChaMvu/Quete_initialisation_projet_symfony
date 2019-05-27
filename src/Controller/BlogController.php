@@ -21,7 +21,6 @@ use App\Entity\Article;
  * @package App\Controller
  * @Route("/blog")
  */
-
 class BlogController extends AbstractController
 {
     /**
@@ -61,12 +60,12 @@ class BlogController extends AbstractController
      * @return Response A response instance
      */
 
-    public function show(?string $slug) : Response
+    public function show(?string $slug): Response
     {
 
         if (!$slug) {
             throw $this
-            ->createNotFoundException('No slug has been sent to find an article in article\'s table.');
+                ->createNotFoundException('No slug has been sent to find an article in article\'s table.');
         }
 
         $slug = preg_replace(
@@ -80,43 +79,47 @@ class BlogController extends AbstractController
 
         if (!$article) {
             throw $this->createNotFoundException(
-                'No article with'.$slug.'title, found in article\'s table.'
+                'No article with' . $slug . 'title, found in article\'s table.'
             );
         }
 
         return $this->render('Blog/show.html.twig', [
-            'article' => $article,
-            'slug' => $slug
+                'article' => $article,
+                'slug' => $slug
             ]
         );
     }
 
     /**
-     * @param string $categoryName
      *
      * @Route("/category/{categoryName}" , name = "show_category")
      *
      * @return Response A response instance
      */
 
-    public function showByCategory(string $categoryName = 'Javascript'): Response
+    public function showByCategory(string $categoryName = 'php'): Response
     {
-        $data = [];
-        $data['category'] = $this->getDoctrine()
+
+        $category = $this->getDoctrine()
             ->getRepository(Category::class)
-            ->findOneBy(['name' => mb_strtolower($categoryName)]);
+            ->findOneBy(['name' => $categoryName]);
 
 
-        $data['articles'] = $this->getDoctrine()
-            ->getRepository(Article::class)
-            ->findBy(['category' => $data['category']], ['id' => 'DESC'], 3);
+        /*$articles= $this->getDoctrine()
+         ->getRepository(Article::class)
+          ->findBy(['category' => $category, ['id' => 'DESC'], 3]);
+*/
 
+
+        $articles = $category->getArticles();
 
         return $this->render(
             'Blog/category.html.twig',
-            $data
+            [
+                'category' => $category,
+                'articles' => $articles
+            ]
         );
     }
-
 
 }

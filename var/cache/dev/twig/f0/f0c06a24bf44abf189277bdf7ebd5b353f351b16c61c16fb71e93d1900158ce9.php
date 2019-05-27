@@ -61,6 +61,6 @@ class __TwigTemplate_2bbf5c960c5f616faf2e8e4cd7b74d413f2b1d940dd7c19cbe81d4845d3
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'number']) ?>
-", "@Framework/Form/integer_widget.html.php", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/framework-bundle/Resources/views/Form/integer_widget.html.php");
+", "@Framework/Form/integer_widget.html.php", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/framework-bundle/Resources/views/Form/integer_widget.html.php");
     }
 }

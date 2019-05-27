@@ -1806,6 +1806,6 @@ class __TwigTemplate_682a884b20dc8a251ab67ff7767880aaec1e14f54565af9ce57d832c677
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

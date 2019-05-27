@@ -73,6 +73,6 @@ class __TwigTemplate_1563bd1d0e5a313372cac003883832f603234885e2046fa911cd320570a
         return new Source("/*
 {{ include('@Twig/Exception/exception.txt.twig', { exception: exception }) }}
 */
-", "@Twig/Exception/exception.css.twig", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/twig-bundle/Resources/views/Exception/exception.css.twig");
+", "@Twig/Exception/exception.css.twig", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/twig-bundle/Resources/views/Exception/exception.css.twig");
     }
 }

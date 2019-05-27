@@ -67,6 +67,6 @@ class __TwigTemplate_5bbb63efd0eff400bba2e61e1fdac84c2f81366e18a0d6a55b806d084c1
 <?php echo \$view['form']->rest(\$form) ?>
 <?php endif ?>
 </form>
-", "@Framework/Form/form_end.html.php", "/home/wilder/workspace/symfony/quete1/Blog/vendor/symfony/framework-bundle/Resources/views/Form/form_end.html.php");
+", "@Framework/Form/form_end.html.php", "/home/wilder/workspace/symfony/quete1/blog/vendor/symfony/framework-bundle/Resources/views/Form/form_end.html.php");
     }
 }

@@ -62,35 +62,38 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "    ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 5, $this->source); })()), "name", [], "any", false, false, false, 5), "html", null, true);
         echo "
+
     ";
-        // line 6
+        // line 7
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 7, $this->source); })()), "name", [], "any", false, false, false, 7), "html", null, true);
+        echo "
+<ul>
+
+    ";
+        // line 10
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 6, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 10, $this->source); })()));
+        $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 7
-            echo "
-        <h1>";
-            // line 8
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 8), "html", null, true);
-            echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 8), "html", null, true);
-            echo "</h1>
-
-        <p>";
-            // line 10
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 10), "html", null, true);
-            echo "</p>
-
+            // line 11
+            echo "    <li>    ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 11), "html", null, true);
+            echo "</li>
+    ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 13
+            echo "rien !
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 13
-        echo "
+        // line 15
+        echo "</ul>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -112,7 +115,7 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
 
     public function getDebugInfo()
     {
-        return array (  93 => 13,  84 => 10,  77 => 8,  74 => 7,  70 => 6,  65 => 5,  56 => 4,  34 => 1,);
+        return array (  95 => 15,  88 => 13,  80 => 11,  75 => 10,  69 => 7,  65 => 5,  56 => 4,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -121,14 +124,17 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
 
 
 {% block body %}
+
+
     {{ category.name }}
+<ul>
+
     {% for article in articles %}
-
-        <h1>{{ article.id }} {{ article.title }}</h1>
-
-        <p>{{ article.content }}</p>
-
+    <li>    {{ article.title }}</li>
+    {% else %}
+rien !
     {% endfor %}
+</ul>
 
 {% endblock %}", "Blog/category.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/Blog/category.html.twig");
     }
