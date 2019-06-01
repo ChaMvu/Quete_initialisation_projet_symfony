@@ -42,7 +42,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                     .')'
                     .'|/blog(?'
                         .'|(?:/([a-z0-9-]+))?(*:195)'
-                        .'|/category(?:/([^/]++))?(*:226)'
+                        .'|/category/([^/]++)(*:221)'
                     .')'
                 .')/?$}sDu',
         ];
@@ -55,7 +55,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
             159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
             195 => [[['_route' => 'blog_show', 'slug' => null, '_controller' => 'App\\Controller\\BlogController::show'], ['slug'], null, null, false, true, null]],
-            226 => [[['_route' => 'show_category', 'categoryName' => 'php', '_controller' => 'App\\Controller\\BlogController::showByCategory'], ['categoryName'], null, null, false, true, null]],
+            221 => [[['_route' => 'show_category', '_controller' => 'App\\Controller\\BlogController::showByCategory'], ['name'], null, null, false, true, null]],
         ];
     }
 }

@@ -64,11 +64,11 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
         // line 5
         echo "
 
-    ";
+   <p>Catégorie: ";
         // line 7
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 7, $this->source); })()), "name", [], "any", false, false, false, 7), "html", null, true);
-        echo "
-<ul>
+        echo " </p>
+    <ul>
 
     ";
         // line 10
@@ -126,8 +126,8 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
 {% block body %}
 
 
-    {{ category.name }}
-<ul>
+   <p>Catégorie: {{ category.name }} </p>
+    <ul>
 
     {% for article in articles %}
     <li>    {{ article.title }}</li>
