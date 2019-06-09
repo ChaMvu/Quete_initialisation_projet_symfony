@@ -3,29 +3,35 @@
 {% block title %}All articles{% endblock %}
 
 {% block body %}
+    <div class="align-content-around">
 
-    {{ form_start(form) }}
+        {{ form_start(form) }}
         {{ form_row(form.searchField) }}
-        <button type="submit" name="btnSearch">Rechercher</button>
-    {{ form_end(form) }}
+        <button type="submit" name="btnSearch">Search</button>
+        {{ form_end(form) }}
+
+    </div>
 
 
 
-    <h1>All articles from article s table : </h1>
+    <h1 class="text-center articleTitle">All articles from article s table : </h1>
 
-    {% for article in articles %}
+    <div class="container">
+        {% for article in articles %}
 
-        <div>
-            <h2>{{ loop.index }} / {{ article.title }} - Category : {{ article.category.name }}</h2>
-            <p>{{ article.content }}</p>
-        </div>
+            <div>
+                <h2 class="articles">{{ loop.index }} / {{ article.title }} - Category : {{ article.category.name }}</h2>
+                <p>{{ article.content }}</p>
+            </div>
 
-    {% else %}
-        Aucun article trouvé.
-    {% endfor %}
+        {% else %}
+            Aucun article trouvé.
+        {% endfor %}
 
-    <a href="{{ path('app_index') }}">
-        Back to homepage.
-    </a>
+        <a href="{{ path('app_index') }}">
+            Back to homepage.
+        </a>
+    </div>
+
 
 {% endblock %}

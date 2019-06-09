@@ -47,7 +47,7 @@ class CategoryController extends AbstractController
         }
 
         return $this->render(
-            'Blog/category.html.twig' , [
+            'Blog/add.html.twig' , [
                 'form' => $form->createView()
             ]
         );
