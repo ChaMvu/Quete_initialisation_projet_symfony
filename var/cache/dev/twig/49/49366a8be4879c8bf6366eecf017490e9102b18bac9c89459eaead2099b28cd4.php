@@ -61,7 +61,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
         // line 10
         $this->loadTemplate("Blog/navbar.html.twig", "base.html.twig", 10)->display($context);
         echo " </header>
-    
+
     <body>
 
         ";
@@ -181,7 +181,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
     </head>
 
     <header>{% include 'Blog/navbar.html.twig' %} </header>
-    
+
     <body>
 
         {% block body %}{{ encore_entry_link_tags('app') }}{% endblock %}
