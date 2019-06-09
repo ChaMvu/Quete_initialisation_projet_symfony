@@ -63,36 +63,26 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
 
         // line 5
         echo "
+    <h1> Ajouter une catégorie :</h1>
 
-   <p>Catégorie: ";
-        // line 7
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 7, $this->source); })()), "name", [], "any", false, false, false, 7), "html", null, true);
-        echo " </p>
-    <ul>
 
+   ";
+        // line 9
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
+        echo "
     ";
         // line 10
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 10, $this->source); })()));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 11
-            echo "    <li>    ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 11), "html", null, true);
-            echo "</li>
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "name", [], "any", false, false, false, 10), 'row');
+        echo "
+
+    <button class=\"btn btn-info\">";
+        // line 12
+        echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 12, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+        echo "</button>
     ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 13
-            echo "rien !
-    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 15
-        echo "</ul>
+        // line 13
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_end');
+        echo "
 
 ";
         
@@ -115,7 +105,7 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
 
     public function getDebugInfo()
     {
-        return array (  95 => 15,  88 => 13,  80 => 11,  75 => 10,  69 => 7,  65 => 5,  56 => 4,  34 => 1,);
+        return array (  84 => 13,  80 => 12,  75 => 10,  71 => 9,  65 => 5,  56 => 4,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -125,16 +115,14 @@ class __TwigTemplate_ec40b391650633a3a6f9fd8077ad899f961e252da9e0903d7319d9d4b4f
 
 {% block body %}
 
+    <h1> Ajouter une catégorie :</h1>
 
-   <p>Catégorie: {{ category.name }} </p>
-    <ul>
 
-    {% for article in articles %}
-    <li>    {{ article.title }}</li>
-    {% else %}
-rien !
-    {% endfor %}
-</ul>
+   {{ form_start(form) }}
+    {{ form_row(form.name) }}
+
+    <button class=\"btn btn-info\">{{  button_label|default('Save') }}</button>
+    {{ form_end(form) }}
 
 {% endblock %}", "Blog/category.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/Blog/category.html.twig");
     }

@@ -3,15 +3,13 @@
 
 {% block body %}
 
+    <h1> Ajouter une catégorie :</h1>
 
-   <p>Catégorie: {{ category.name }} </p>
-    <ul>
 
-    {% for article in articles %}
-    <li>    {{ article.title }}</li>
-    {% else %}
-rien !
-    {% endfor %}
-</ul>
+   {{ form_start(form) }}
+    {{ form_row(form.name) }}
+
+    <button class="btn btn-info">{{  button_label|default('Save') }}</button>
+    {{ form_end(form) }}
 
 {% endblock %}

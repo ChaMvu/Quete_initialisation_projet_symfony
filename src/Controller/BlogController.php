@@ -9,12 +9,16 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Form\ArticleSearchType;
+use App\Form\CategoryType;
 use App\Repository\ArticleRepository;
 use phpDocumentor\Reflection\Types\String_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Article;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class BlogController
@@ -30,8 +34,15 @@ class BlogController extends AbstractController
      * @return Response A response instance
      */
 
-    public function index(): Response
+    public function index(Request $request): Response
     {
+        $form = $this->createForm(ArticleSearchType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $form->getData();
+        }
+
         $articles = $this->getDoctrine()
             ->getRepository(Article::class)
             ->findAll();
@@ -42,8 +53,25 @@ class BlogController extends AbstractController
             );
         }
 
-        return $this->render('Blog/index.html.twig', [
+        /*return $this->render('Blog/index.html.twig', [
                 'articles' => $articles,
+            ]
+        ); */
+
+       /*$category = new Category();
+        $formCategory = $this->createForm(CategoryType::class, $category); */
+
+        $formSearch = $this->createForm(
+            ArticleSearchType::class,
+            null,
+            ['method' => Request::METHOD_GET]
+        );
+
+        return $this->render(
+            'Blog/index.html.twig', [
+                'articles' => $articles,
+                'form' => $formSearch->createView(),
+                //'formCategory' => $formCategory->createView(),
             ]
         );
     }
@@ -100,9 +128,9 @@ class BlogController extends AbstractController
     public function showByCategory(Category $category): Response
     {
 
-       /* $category = $this->getDoctrine()
-            ->getRepository(Category::class)
-            ->findOneBy(['name' => $categoryName]); */
+        /* $category = $this->getDoctrine()
+             ->getRepository(Category::class)
+             ->findOneBy(['name' => $categoryName]); */
 
 
         /*$articles= $this->getDoctrine()
