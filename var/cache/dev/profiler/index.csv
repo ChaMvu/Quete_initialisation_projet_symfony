@@ -546,3 +546,6 @@ ffa1e1,127.0.0.1,GET,http://localhost:8000/tag/,1560175971,,200
 a53249,127.0.0.1,GET,http://localhost:8000/tag/javascript,1560176016,,200
 267a21,127.0.0.1,GET,http://localhost:8000/tag/git,1560176019,,200
 cf173a,127.0.0.1,GET,http://localhost:8000/tag/mysql,1560176023,,200
+2dafdd,127.0.0.1,GET,http://localhost:8000/article/11,1560176521,,200
+74010e,127.0.0.1,GET,http://localhost:8000/article/13,1560176525,,200
+f7b183,127.0.0.1,GET,http://localhost:8000/tag/MySQL,1560176527,,200
