@@ -145,6 +145,7 @@ class __TwigTemplate_75290b73d908c2afcf6aa6d86e318cc3465a915bf2c66c688f7d26d8556
         // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
         echo "\">Create new</a>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -207,6 +208,7 @@ class __TwigTemplate_75290b73d908c2afcf6aa6d86e318cc3465a915bf2c66c688f7d26d8556
     </table>
 
     <a href=\"{{ path('article_new') }}\">Create new</a>
+
 {% endblock %}
 ", "article/index.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/article/index.html.twig");
     }

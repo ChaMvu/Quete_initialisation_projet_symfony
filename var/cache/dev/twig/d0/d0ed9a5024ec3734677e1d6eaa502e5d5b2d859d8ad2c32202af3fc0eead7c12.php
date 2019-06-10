@@ -85,27 +85,27 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
 
     <table class=\"table\">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
+        <tr>
+            <th>Id</th>
+            <td>";
         // line 12
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>";
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>";
         // line 16
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "title", [], "any", false, false, false, 16), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>";
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td>";
         // line 20
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "content", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
-            </tr>
+        </tr>
         </tbody>
     </table>
 
@@ -123,6 +123,34 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
         // line 29
         echo twig_include($this->env, $context, "article/_delete_form.html.twig");
         echo "
+
+    <strong>Tags :</strong>
+    <ul>
+        ";
+        // line 33
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 33, $this->source); })()), "tags", [], "any", false, false, false, 33));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
+            // line 34
+            echo "            <li><a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tag_show", ["name" => twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, false, 34)]), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, false, 34), "html", null, true);
+            echo "</a></li>
+        ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 36
+            echo "            <li>No tags for this article</li>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 38
+        echo "    </ul>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -144,7 +172,7 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
 
     public function getDebugInfo()
     {
-        return array (  124 => 29,  119 => 27,  114 => 25,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  153 => 38,  146 => 36,  136 => 34,  131 => 33,  124 => 29,  119 => 27,  114 => 25,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -158,18 +186,18 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
 
     <table class=\"table\">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ article.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ article.content }}</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ article.id }}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{ article.title }}</td>
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td>{{ article.content }}</td>
+        </tr>
         </tbody>
     </table>
 
@@ -178,6 +206,15 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
     <a href=\"{{ path('article_edit', {'id': article.id}) }}\">edit</a>
 
     {{ include('article/_delete_form.html.twig') }}
+
+    <strong>Tags :</strong>
+    <ul>
+        {% for tag in article.tags %}
+            <li><a href=\"{{ path('tag_show', {'name' : tag.name}) }}\">{{ tag.name }}</a></li>
+        {% else %}
+            <li>No tags for this article</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 ", "article/show.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/article/show.html.twig");
     }
