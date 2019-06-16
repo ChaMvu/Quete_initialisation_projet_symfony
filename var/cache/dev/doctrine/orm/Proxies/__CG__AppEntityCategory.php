@@ -243,4 +243,15 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
         return parent::removeArticle($article);
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function addArticle(\App\Entity\Article $article): \App\Entity\Category
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addArticle', [$article]);
+
+        return parent::addArticle($article);
+    }
+
 }

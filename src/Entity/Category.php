@@ -89,4 +89,14 @@ class Category
         }
         return $this;
     }
+
+    public function addArticle(Article $article): self
+    {
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
+            $article->setCategory($this);
+        }
+
+        return $this;
+    }
 }

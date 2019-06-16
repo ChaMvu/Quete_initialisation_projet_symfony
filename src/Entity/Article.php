@@ -35,7 +35,7 @@ class Article
     private $category;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Tag", mappedBy="articles")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Tag", inversedBy="articles")
      */
     private $tags;
 
@@ -97,7 +97,6 @@ class Article
     {
         if (!$this->tags->contains($tag)) {
             $this->tags[] = $tag;
-            $tag->addArticle($this);
         }
 
         return $this;
@@ -107,9 +106,10 @@ class Article
     {
         if ($this->tags->contains($tag)) {
             $this->tags->removeElement($tag);
-            $tag->removeArticle($this);
         }
 
         return $this;
     }
+
+
 }
