@@ -61,16 +61,36 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
         // line 10
         $this->loadTemplate("Blog/navbar.html.twig", "base.html.twig", 10)->display($context);
         echo " </header>
-
+    ";
+        // line 11
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11)) {
+            // line 12
+            echo "        Bonjour ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", [], "any", false, false, false, 12), "email", [], "any", false, false, false, 12), "html", null, true);
+            echo " !
+        <a href=\"";
+            // line 13
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\"> Se déconnecter</a>
+    ";
+        } else {
+            // line 15
+            echo "        <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\"> Se connecter</a>
+    ";
+        }
+        // line 17
+        echo "
     <body>
 
         ";
-        // line 14
+        // line 20
         $this->displayBlock('body', $context, $blocks);
-        // line 15
+        // line 21
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
+        // line 22
         echo "    </body>
 </html>
 ";
@@ -118,7 +138,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     }
 
-    // line 14
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -136,7 +156,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     }
 
-    // line 15
+    // line 21
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -166,7 +186,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     public function getDebugInfo()
     {
-        return array (  140 => 15,  122 => 14,  104 => 7,  86 => 6,  74 => 16,  71 => 15,  69 => 14,  62 => 10,  58 => 8,  56 => 7,  52 => 6,  45 => 1,);
+        return array (  160 => 21,  142 => 20,  124 => 7,  106 => 6,  94 => 22,  91 => 21,  89 => 20,  84 => 17,  78 => 15,  73 => 13,  68 => 12,  66 => 11,  62 => 10,  58 => 8,  56 => 7,  52 => 6,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -181,6 +201,12 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
     </head>
 
     <header>{% include 'Blog/navbar.html.twig' %} </header>
+    {% if app.user %}
+        Bonjour {{ app.user.email }} !
+        <a href=\"{{ path('app_logout') }}\"> Se déconnecter</a>
+    {% else %}
+        <a href=\"{{ path('app_login') }}\"> Se connecter</a>
+    {% endif %}
 
     <body>
 
