@@ -36,4 +36,9 @@
             <li>No tags for this article</li>
         {% endfor %}
     </ul>
+
+    {% if is_granted('ROLE_AUTHOR') %}
+        <a href="{{ path('article_edit', {'id': article.id}) }}">Modifier</a>
+    {% endif %}
+    {{ include('article/_delete_form.html.twig') }}
 {% endblock %}
