@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
- * @UniqueEntity("title")
+ * @UniqueEntity("title", message="Ce titre existe déjà")
  */
 class Article
 {

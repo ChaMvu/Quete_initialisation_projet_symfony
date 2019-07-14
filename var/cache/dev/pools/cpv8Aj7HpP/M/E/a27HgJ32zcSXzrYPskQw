@@ -11,6 +11,9 @@
                 'repositoryClass' => [
                     'App\\Repository\\ArticleRepository',
                 ],
+                'message' => [
+                    1 => 'Ce titre existe déjà',
+                ],
                 'fields' => [
                     1 => 'title',
                 ],

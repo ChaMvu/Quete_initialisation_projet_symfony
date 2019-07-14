@@ -104,6 +104,12 @@ class __TwigTemplate_342797c0156fb2b715692bb3bdccdd915f8b2b257e3eb59ee20d4b43f3b
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_category");
         echo "\">Add a category</a>
             </li>
+            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
+        echo "\">Add an article</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -124,7 +130,7 @@ class __TwigTemplate_342797c0156fb2b715692bb3bdccdd915f8b2b257e3eb59ee20d4b43f3b
 
     public function getDebugInfo()
     {
-        return array (  104 => 26,  98 => 23,  92 => 20,  86 => 17,  80 => 14,  74 => 11,  64 => 4,  60 => 2,  42 => 1,);
+        return array (  110 => 29,  104 => 26,  98 => 23,  92 => 20,  86 => 17,  80 => 14,  74 => 11,  64 => 4,  60 => 2,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -155,6 +161,9 @@ class __TwigTemplate_342797c0156fb2b715692bb3bdccdd915f8b2b257e3eb59ee20d4b43f3b
             </li>
             <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"{{ path('add_category')}}\">Add a category</a>
+            </li>
+            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"{{ path('article_new')}}\">Add an article</a>
             </li>
         </ul>
     </div>
