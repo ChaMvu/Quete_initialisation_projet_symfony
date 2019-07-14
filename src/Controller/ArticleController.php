@@ -80,7 +80,7 @@ class ArticleController extends AbstractController
      */
     public function edit(Request $request, Article $article, Slugify $slugify): Response
     {
-        if($article->getAuthor() !== $this->getUser()->getRoles()){
+        if($this->getUser()->getRoles() && $article->getAuthor() !== $this->getUser()){
             throw $this->createAccessDeniedException();
         }
 

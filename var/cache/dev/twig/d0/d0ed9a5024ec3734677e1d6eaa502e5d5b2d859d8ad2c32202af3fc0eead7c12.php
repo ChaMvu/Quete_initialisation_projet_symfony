@@ -151,6 +151,20 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 38
         echo "    </ul>
+
+    ";
+        // line 40
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_AUTHOR")) {
+            // line 41
+            echo "        <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 41, $this->source); })()), "id", [], "any", false, false, false, 41)]), "html", null, true);
+            echo "\">Modifier</a>
+    ";
+        }
+        // line 43
+        echo "    ";
+        echo twig_include($this->env, $context, "article/_delete_form.html.twig");
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -172,7 +186,7 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
 
     public function getDebugInfo()
     {
-        return array (  153 => 38,  146 => 36,  136 => 34,  131 => 33,  124 => 29,  119 => 27,  114 => 25,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  165 => 43,  159 => 41,  157 => 40,  153 => 38,  146 => 36,  136 => 34,  131 => 33,  124 => 29,  119 => 27,  114 => 25,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -215,6 +229,11 @@ class __TwigTemplate_5388c48504d8dda03757e3417983d8f56965e185f36a2bc57aa848265ed
             <li>No tags for this article</li>
         {% endfor %}
     </ul>
+
+    {% if is_granted('ROLE_AUTHOR') %}
+        <a href=\"{{ path('article_edit', {'id': article.id}) }}\">Modifier</a>
+    {% endif %}
+    {{ include('article/_delete_form.html.twig') }}
 {% endblock %}
 ", "article/show.html.twig", "/home/wilder/workspace/symfony/quete1/blog/templates/article/show.html.twig");
     }
