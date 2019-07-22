@@ -74,7 +74,7 @@ class __TwigTemplate_f5cfdf022dab793b83062597c7f125b00dca359a0226cd8d530964398f9
             <li class=\"nav-item active\">
                 <a class=\"nav-link\" href=\"";
         // line 11
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Articles</a>
             </li>
             <li class=\"nav-item\">
@@ -148,7 +148,7 @@ class __TwigTemplate_f5cfdf022dab793b83062597c7f125b00dca359a0226cd8d530964398f9
     <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
         <ul class=\"navbar-nav\">
             <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"{{ path('index') }}\">Articles</a>
+                <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Articles</a>
             </li>
             <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"{{ path('show_category', { 'name': \"Javascript\" }) }}\">Javascript</a>

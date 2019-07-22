@@ -91,68 +91,85 @@ class __TwigTemplate_d217c3ea039a91ce83d2a9b47322d472b2e1d41189f35329c3f5e3889c9
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>actions</th>
+                <th>Titre</th>
+                <th>Contenu</th>
+                <th>Tag</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 19, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 19
+            // line 20
             echo "            <tr>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 20), "html", null, true);
-            echo "</td>
-                <td>";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                 <td>";
             // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 22), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 23), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 24
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["article"], "tags", [], "any", false, false, false, 24));
+            foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
+                // line 25
+                echo "                    ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, false, 25), "html", null, true);
+                echo "
+                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 26
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-            echo "\">show</a>
+            // line 28
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            echo "\">Voir</a>
                     ";
-            // line 25
+            // line 29
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_AUTHOR")) {
-                // line 26
+                // line 30
                 echo "                        <a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 30)]), "html", null, true);
                 echo "\">Éditer</a>
                     ";
             }
-            // line 28
+            // line 32
             echo "                </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 31
+            // line 35
             echo "            <tr>
-                <td colspan=\"4\">no records found</td>
+                <td colspan=\"4\">Aucun article trouvé</td>
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 39
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 38
+        // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
         echo "\">Create new</a>
 
@@ -177,7 +194,7 @@ class __TwigTemplate_d217c3ea039a91ce83d2a9b47322d472b2e1d41189f35329c3f5e3889c9
 
     public function getDebugInfo()
     {
-        return array (  156 => 38,  151 => 35,  142 => 31,  135 => 28,  129 => 26,  127 => 25,  123 => 24,  118 => 22,  114 => 21,  110 => 20,  107 => 19,  102 => 18,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  173 => 42,  168 => 39,  159 => 35,  152 => 32,  146 => 30,  144 => 29,  140 => 28,  136 => 26,  127 => 25,  123 => 24,  119 => 23,  115 => 22,  111 => 21,  108 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -193,9 +210,10 @@ class __TwigTemplate_d217c3ea039a91ce83d2a9b47322d472b2e1d41189f35329c3f5e3889c9
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>actions</th>
+                <th>Titre</th>
+                <th>Contenu</th>
+                <th>Tag</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -204,8 +222,11 @@ class __TwigTemplate_d217c3ea039a91ce83d2a9b47322d472b2e1d41189f35329c3f5e3889c9
                 <td>{{ article.id }}</td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.content }}</td>
+                <td>{% for tag in article.tags %}
+                    {{ tag.name }}
+                    {% endfor %}</td>
                 <td>
-                    <a href=\"{{ path('article_show', {'id': article.id}) }}\">show</a>
+                    <a href=\"{{ path('article_show', {'id': article.id}) }}\">Voir</a>
                     {% if is_granted('ROLE_AUTHOR') %}
                         <a href=\"{{ path('article_edit', { 'id': article.id} ) }}\">Éditer</a>
                     {%endif%}
@@ -213,7 +234,7 @@ class __TwigTemplate_d217c3ea039a91ce83d2a9b47322d472b2e1d41189f35329c3f5e3889c9
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"4\">no records found</td>
+                <td colspan=\"4\">Aucun article trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
